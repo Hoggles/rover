@@ -29,9 +29,9 @@ protected:
 
 	UCameraComponent* Camera;
 
-	void ACameraPawn::MoveForward(float value);
+	void MoveForward(float value);
 
-	void ACameraPawn::MoveRight(float value);
+	void MoveRight(float value);
 
 public:	
 	// Called every frame
