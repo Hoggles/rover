@@ -216,7 +216,7 @@ void ARoverGameMode::RunPart1(TArray<FString> Lines) {
 	float sizeX = FCString::Atof(*size[0]);
 	float sizeY = FCString::Atof(*size[1]);
 
-
+	SetupPlateau(sizeX, sizeY);
 
 	// setup each rover
 
@@ -419,8 +419,8 @@ void ARoverGameMode::RunPart2(TArray<FString> Lines) {
 			int32 straightX = FMath::FloorToInt((destination.Y + 50.0f) / 100.0f);
 			int32 rightY = FMath::FloorToInt((rightDestination.X + 50.0f) / 100.0f);
 			int32 rightX = FMath::FloorToInt((rightDestination.Y + 50.0f) / 100.0f);
-			int32 leftY = FMath::FloorToInt((rightDestination.X + 50.0f) / 100.0f);
-			int32 leftX = FMath::FloorToInt((rightDestination.Y + 50.0f) / 100.0f);
+			int32 leftY = FMath::FloorToInt((leftDestination.X + 50.0f) / 100.0f);
+			int32 leftX = FMath::FloorToInt((leftDestination.Y + 50.0f) / 100.0f);
 						
 			if (straightY < 0 || straightX < 0 || straightY > sizeY || straightX > sizeX) { 
 				// Hit an edge
